@@ -1,6 +1,6 @@
 # AWS Security Baseline
 
-> "Security is not a product, but a process." — Bruce Schneier
+> "Security is not a product, but a process." : Bruce Schneier
 
 # Why this project ?
 
