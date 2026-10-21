@@ -1,0 +1,6 @@
+# Copier ce fichier en terraform.tfvars et renseigner vos valeurs.
+# terraform.tfvars est exclu du dépôt (.gitignore) : il ne doit jamais être publié.
+
+admin_ssh_cidr = "203.0.113.10/32" # votre adresse IP publique, en /32
+# aws_region   = "eu-west-3"
+# environment  = "dev"

@@ -90,7 +90,7 @@ resource "aws_security_group" "main" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["37.167.10.211/32"] 
+    cidr_blocks = [var.admin_ssh_cidr]
   }
 
   # HTTPS only — HTTP (port 80) intentionally disabled
@@ -119,7 +119,7 @@ resource "aws_security_group" "main" {
 # EC2 Instance — hardened Amazon Linux 2 server
 resource "aws_instance" "main" {
   ami                         = "ami-0302f42a44bf53a45" # Amazon Linux 2 eu-west-3
- instance_type = "t3.micro"  # Free tier eligible
+  instance_type               = "t3.micro" # Free tier eligible
   subnet_id                   = aws_subnet.public.id
   vpc_security_group_ids      = [aws_security_group.main.id]
   associate_public_ip_address = true
